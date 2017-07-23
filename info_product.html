@@ -1,0 +1,248 @@
+<!--引入heeader.html-->
+{include file="header.html"/}
+
+<div class="ny_ban1" style="background:url({var name="tplurl"/}images/banner11.jpg) center no-repeat;"></div>
+<div class="search clearfix">
+    <div class="fl xdaoh"><p>{pos/}</p></div>
+    <div class="sousuo fr">
+        <div class="search1">
+            <form method="post" action="/so_product" id="search-form">
+            <input type="text" class="inp01" id="keywords" name="keyword"
+                   onkeydown="if(event.keyCode==13){$('#search-form').submit();return false};"
+                   placeholder="输入关键字搜索" x-webkit-speech=""/>
+            <input type="submit" class="inpso"/>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="ny clearfix">
+        <div class="ny1_l fl">
+            <div class="m2_ml" style=" padding-left:0;">
+                <h2>惠工产品中心</h2>
+                <div class="fenlei">
+                    {list_category type="2"}
+                    <ul>
+                        <h3><a href="[value:url/]">[value:name/]</a></h3>
+                        {list_category_2 fid="[value:id/]" type="2"}
+                        <li><a href="[value:url_2/]">[value:name_2/]</a></li>
+                        {/list_category_2}
+                    </ul>
+                    {/list_category}
+                </div>
+            </div>
+
+
+            <div class="sideMenu1 sideMenu2">
+                <h2><a target="_blank" href="{info_category name="url" cat_id="56"/}">成功案例</a></h2>
+                <div class="side_t">
+                    {list_article  row="5" infolen="150" cat_id="56"}
+                    <h5 class="on"><em>1</em><a title="[value:title/]" href="[value:url/]">[value:title/]</a></h5>
+                    <dl style="display: block;">
+                        <a title="[value:title/]" href="[value:url/]" target="_blank"><img src="[value:logo/]" title="[value:title/]" alt="[value:title/]"></a>
+                    </dl>
+                    {/list_article}
+                </div>
+
+            </div>
+            <script type="text/javascript">
+                jQuery(".sideMenu1").slide({
+                    titCell: "h5", //鼠标触发对象
+                    targetCell: "dl", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+                    effect: "slideDown", //targetCell下拉效果
+                    delayTime: 300, //效果时间
+                    triggerTime: 150, //鼠标延迟触发时间（默认150）
+                    defaultPlay: true, //默认是否执行效果（默认true）
+                    returnDefault: true //鼠标从.sideMen移走后返回默认状态（默认false）
+                });
+            </script>
+
+            <div class="ny_contact2"><img src="{var name="tplurl"/}images/cl_lianxi2.jpg" alt=""/></div>
+        </div>
+
+        <div class="ny1_r fr">
+            <div class="cp_det1">
+                <dl class="clearfix">
+                    <dt class="fl">
+                    <div class="goods-pic">
+                        <div class="pic-box">
+                            <div class="pic-preview">
+                                    <span class="jqzoom" style="width: 378px;height: 326px; overflow:hidden;">
+                                        <img style="width:100%;height:100%;">
+                                    </span>
+                            </div>
+                            <div class="pic-scroll">
+                                <a class="prev"><</a>
+                                <a class="next">></a>
+                                <div class="items">
+                                    <ul>
+                                        {list_attachment type="product" row="10"}
+                                        <li>
+                                            <img bimg="[value:logo/]" src="[value:logo/]" onmousemove="preview(this);">
+                                        </li>
+                                        {/list_attachment}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </dt>
+                    <dd class="fr">
+                        <h1>{info_product name="title"/}</h1>
+                        <h5><span>产品名称：</span>{info_product name="title"/}</h5>
+                        <h5><span>产品品牌：</span>{info_product name="cppp-cpnry-"/}</h5>
+                        <h5><span>产品型号：</span>{info_product name="cpcs-cpnry-"/}</h5>
+                        <h4>产品特点：<p></p>
+                            <p style="line-height: 2.3em;"><span style="color: rgb(0, 176, 240);"><strong><span
+                                    style="color: rgb(0, 176, 240); font-size: 21px; font-family: 楷体, 楷体_GB2312, SimKai;">{info_product name="cptd"/}</span></strong></span>
+                            </p>
+                            <p></p>
+                        </h4>
+                        <h6>我公司可根据客户需求订制生产卷闸门</h6>
+                        <h1>
+                            <a href="http://p.qiao.baidu.com/cps/chat?siteId=10966271&userId=10274876" target="_blank">查询更多型号报价</a>
+                        </h1>
+                        <em>
+                            <div id="share_fenx">
+                                <div class="bdsharebuttonbox">
+                                    <span>分享到：</span>
+                                    <a href="http://www.changlitools.com/product/show-1224.html#" class="bds_weixin"
+                                       data-cmd="weixin" title="分享到微信"></a>
+                                    <a href="http://www.changlitools.com/product/show-1224.html#" class="bds_tsina"
+                                       data-cmd="tsina" title="分享到新浪微博"></a>
+                                    <a href="http://www.changlitools.com/product/show-1224.html#" class="bds_tqq"
+                                       data-cmd="tqq" title="分享到腾讯微博"></a>
+                                    <a href="http://www.changlitools.com/product/show-1224.html#" class="bds_douban"
+                                       data-cmd="douban" title="分享到豆瓣网"></a>
+                                    <a href="http://www.changlitools.com/product/show-1224.html#" class="bds_qzone"
+                                       data-cmd="qzone" title="分享到QQ空间"></a>
+                                    <a href="http://www.changlitools.com/product/show-1224.html#" class="bds_renren"
+                                       data-cmd="renren" title="分享到人人网"></a>
+                                </div>
+                            </div>
+                            <script>window._bd_share_config = {
+                                "common": {
+                                    "bdSnsKey": {},
+                                    "bdText": "",
+                                    "bdMini": "2",
+                                    "bdMiniList": false,
+                                    "bdPic": "",
+                                    "bdStyle": "0",
+                                    "bdSize": "16"
+                                }, "share": {}
+                            };
+                            with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+                            </script>
+                        </em>
+                    </dd>
+                </dl>
+            </div>
+            <div class="jia_cp1 clearfix">
+                <div class="zi fl">
+                    <h6>选购卷闸门前必看！！！</h6>
+                    <p><b>A</b>卷闸门种类太多，挑选浪费时间？可把需求告诉客服，为您推荐性价比高的卷闸门，不需翻页查找；</p>
+                    <p><b>B</b>明确自己所需型号，可直接把型号告知客服，马上获取产品资料和报价；</p>
+                    <p><b>C</b>做代理或采购量大，可通过下方渠道客服了解市场销量好的产品，同时获取产品出厂报价！</p>
+                </div>
+                <div class="tu fr">
+                    <ul>
+                        <li><p>不锈钢卷闸门</p></li>
+                        <li class="ys1"><p>自动卷闸门</p></li>
+                        <li class="ys2"><p>电机卷闸门</p></li>
+                        <li class="ys1"><p>防火卷闸门</p></li>
+                        <li><p>水晶卷闸门</p></li>
+                        <li class="ys2"><p>电动卷闸门</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cp_mm cp_mm1">
+                <div class="tatou"><a href="http://p.qiao.baidu.com/cps/chat?siteId=10966271&userId=10274876"
+                                      target="_blank">点我即刻快速咨询</a></div>
+            </div>
+            <div class="cp_det2">
+                <div class="xnav_m3">
+                    <h2>产品介绍<em>/ Products</em></h2>
+                    <span></span>
+                </div>
+                <div class="cp_main1">
+                    {info_product name="content"/}
+                    <section class="unieditor"><p
+                            style="margin-top: 0px; margin-bottom: 0px; padding: 17px; max-width: 100%; word-wrap: break-word; word-break: normal; text-align: center; line-height: 2em; background-color: rgb(25, 107, 179);">
+                        <span style="font-size: 21px;"><strong><span style="color: rgb(255, 255, 255);">卷闸门结实吗？通商惠工在线客服1分钟为您解答！</span></strong></span>
+                    </p></section>
+
+                    <div class="cp_mm">
+                        <div class="xnav1"><p>在线咨询卷闸门工程师，快速帮您选择适合您的卷闸门！</p></div>
+                        <div class="tatou"><a href="http://p.qiao.baidu.com/cps/chat?siteId=10966271&userId=10274876"
+                                              target="_blank">您的1对1专属VIP客服</a></div>
+                        <div class="cp1">
+                            <ul>
+                                <li class="tu1"><img src="{var name="tplurl"/}images/cp_nytu1.jpg">
+                                    <p>生产车间</p></li>
+                                <li class="tu1"><img src="{var name="tplurl"/}images/cp_nytu2.jpg">
+                                    <p>刀头焊接</p></li>
+                                <li class="tu2"><img src="{var name="tplurl"/}images/cp_nytu7.jpg">
+                                    <p>厂房一角</p></li>
+                                <li class="tu2"><img src="{var name="tplurl"/}images/cp_nytu8.jpg">
+                                    <p>销售管理团队</p></li>
+                            </ul>
+                        </div>
+                        <div class="xnav1"><p>卷闸门种类太多怎么选？商通惠工资深业务经理在线为您选择性价比高的卷闸门！</p></div>
+                        <div class="tatou"><a href="http://p.qiao.baidu.com/cps/chat?siteId=10966271&userId=10274876"
+                                              target="_blank">您的1对1专属VIP客服</a></div>
+                        <div class="cp2"><img src="{var name="tplurl"/}images/cp_nydtu1.jpg"></div>
+                        <div class="xnav1"><p>26年卷闸门制造企业，厂家直销高性价比，点击获取产品报价！</p></div>
+                        <div class="tatou"><a href="http://p.qiao.baidu.com/cps/chat?siteId=10966271&userId=10274876"
+                                              target="_blank">您的1对1专属VIP客服</a></div>
+                        <div class="xnav1 xnav2"><p>商通惠工卷闸门客户案例</p></div>
+
+                        <div class="side_t">
+                            {list_article  row="5" infolen="150" cat_id="56"}
+                            <h5 class="on"><em>1</em><a title="[value:title/]" href="[value:url/]">[value:title/]</a></h5>
+                            <dl style="display: block;">
+                                <a title="[value:title/]" href="[value:url/]" target="_blank"><img src="[value:logo/]" title="[value:title/]" alt="[value:title/]"></a>
+                            </dl>
+                            {/list_article}
+                        </div>
+
+                        {list_article  row="4" infolen="150" cat_id="56"}
+                        <dl class="wenz1">
+                            <dt><img src="[value:logo/]" title="[value:title/]" alt="[value:title/]"></dt>
+                            <dd>
+                                <h6>[value:title/]</h6>
+                                <p>[value:remark/]</p>
+                                <a href=""http://p.qiao.baidu.com/cps/chat?siteId=10966271&userId=10274876"
+                                   target="_blank">点我获取报价</a>
+                            </dd>
+                        </dl>
+                        {/list_article}
+                    </div>
+                </div>
+            </div>
+            <div class="hou_cp">
+                <div class="xnav_m3">
+                    <h2>热品推荐<em>/ Hot Featured</em></h2>
+                    <span></span>
+                </div>
+                <ul class="cp_main2">
+                    {list_product  row="6" logo="1"}
+                    <li>
+                        <a href="[value:url/]">
+                            <div class="pic"><img src="[value:logo/]"></div>
+                            <div class="title"><h2>[value:title/]</h2></div>
+                        </a>
+                    </li>
+                    {/list_product}
+                </ul>
+            </div>
+            <script type="text/javascript">               jQuery(".cp_det3").slide();</script>
+
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+</div>
+
+<!--引入footer.html-->
+{include file="footer.html"/}

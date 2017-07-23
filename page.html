@@ -1,0 +1,84 @@
+<!--引入heeader.html-->
+{include file="header.html"/}
+
+<div class="ny_ban1" style="background:url({var name="tplurl"/}/images/banner22.jpg) center no-repeat;"></div>
+<div class="search clearfix">
+    <div class="fl xdaoh"><p>{pos/}</p></div>
+    <div class="sousuo fr">
+        <div class="search1">
+            <form method="post" action="/so_product" id="search-form">
+            <input type="text" class="inp01" id="keywords" name="keyword"
+                   onkeydown="if(event.keyCode==13){$('#search-form').submit();return false};"
+                   placeholder="输入关键字搜索" x-webkit-speech=""/>
+            <input type="submit" class="inpso"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class=" content">
+    <div class="ny clearfix">
+        <div class="ny_r fr">
+            <div class="news_que2">
+                <h1>{info_page name="name"/}</h1>
+            </div>
+            <div class="fuwu_wenz">
+                {info_page name="content"/}
+            </div>
+
+            <div class="jiathis_style" style="width:800px; height:24px; margin:20px auto 0px">
+                <span class="jiathis_txt">分享到：</span>
+                <a class="jiathis_button_weixin">微信</a>
+                <a class="jiathis_button_tsina">新浪微博</a>
+                <a class="jiathis_button_tqq">腾讯微博</a>
+                <a class="jiathis_button_qzone">QQ空间</a>
+                <a class="jiathis_button_cqq">QQ好友</a>
+                <a class="jiathis_button_copy">复制网址</a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+                <a class="jiathis_counter_style"></a>
+            </div>
+            <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+        </div>
+
+        <div class="ny_l fl">
+            <div class="sideMenu">
+                <h2>走进惠工</a></h2>
+                <h4><a href="/youshi.html">惠工优势</a></h4>
+                <h4><a href="/about.html">惠工简介</a></h4>
+                <h4><a href="/contact.html">联系方式</a></h4>
+            </div>
+
+            <div class="sideMenu1">
+                <h2>推荐产品</a></h2>
+                <div class="side_t">
+                    {list_product  row="6" logo="1"}
+                    <h5 class="on"><em>1</em><a title="[value:title/]" href="[value:url/]">[value:title/]</a></h5>
+                    <dl style="display: block;">
+                        <a title="[value:title/]" href="[value:url/]" target="_blank"><img src="[value:logo/]" title="[value:title/]" alt="[value:title/]"></a>
+                    </dl>
+                    {/list_product}
+                </div>
+
+            </div>
+            <script type="text/javascript">
+                jQuery(".sideMenu1").slide({
+                    titCell: "h5", //鼠标触发对象
+                    targetCell: "dl", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+                    effect: "slideDown", //targetCell下拉效果
+                    delayTime: 300, //效果时间
+                    triggerTime: 150, //鼠标延迟触发时间（默认150）
+                    defaultPlay: true, //默认是否执行效果（默认true）
+                    returnDefault: true //鼠标从.sideMen移走后返回默认状态（默认false）
+                });
+            </script>
+
+            <div class="ny_contact"><img src="{var name="tplurl"/}images/cl_lianxi1.jpg" alt="卷闸门锯片价格"/></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+</div>
+
+<!--引入footer.html-->
+{include file="footer.html"/}

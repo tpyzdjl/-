@@ -1,0 +1,45 @@
+{include file="header.html"/}
+<div class="allpage">
+    <div class="black-fixed iconfont"></div>
+    <div class="header">
+        <div class="head">
+            <a href="{var name="host"/}" title="首页" class="home-btn commonfont"></a>
+            <p class="top-title">{info_page name="name"/}</p>
+
+            <div class="nav-btn commonfont"></div>
+        </div>
+        <div class="type">
+
+            <div class="search_hl iconfont"></div>
+            <div class="search" style="display: block;">
+                <form action="/so_product" method="get">
+                    <a class="xbtn iconfont" href="javascript:;"></a>
+                    <input type="text" name="keyword" class="search-lh-input" placeholder="请输入搜索关键词">
+                    <input type="submit" class="search-lh-btn iconfont" value="">
+                </form>
+            </div>
+
+            <div class="banner3">
+                <div class="swiper-slide"><img src="{var name="tplurl"/}images/C4BDF6A267CECFF1D1470400134C4C93.jpg">
+                </div>
+            </div>
+            <h1>产品分类：</h1>
+            <ul>
+              {list_category type="2" row="3"}
+              <li>
+                    <a href="[value:url/]" title="[value:name/]">[value:name/]</a>
+                    <span class="commonfont class-down"></span>
+                    <dl>
+                    </dl>
+                </li>
+{/list_category}
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="about">
+<div class="picContent">{info_page name="content"/}</div>
+        </div>
+    </div>
+  <!--footer-->
+{include file="footer.html"/}

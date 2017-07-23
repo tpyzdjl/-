@@ -1,0 +1,202 @@
+<!--引入heeader.html-->
+{include file="header.html"/}
+
+<div class="ny_ban1" style="background:url({var name="tplurl"/}images/banner11.jpg) center no-repeat;"></div>
+<div class="search clearfix">
+    <div class="fl xdaoh"><p>{pos/}</p></div>
+    <div class="sousuo fr"><div class="search1">
+            <form method="post" action="/so_product" id="search-form">
+            <input type="text" class="inp01" id="keywords" name="keyword"
+                   onkeydown="if(event.keyCode==13){$('#search-form').submit();return false};"
+                   placeholder="输入关键字搜索" x-webkit-speech=""/>
+            <input type="submit" class="inpso"/>
+            </form>
+    </div></div>
+</div>
+
+<div class="content">
+    <div class="ny clearfix">
+        <div class="ny1_l fl">
+            <div class="m2_ml" style=" padding-left:0;">
+                <h2>惠工产品中心</h2>
+                <div class="fenlei">
+                    {list_category type="2"}
+                    <ul>
+                        <h3><a href="[value:url/]">[value:name/]</a></h3>
+                        {list_category_2 fid="[value:id/]" type="2"}
+                        <li><a href="[value:url_2/]">[value:name_2/]</a></li>
+                        {/list_category_2}
+                    </ul>
+                    {/list_category}
+                </div>
+            </div>
+
+
+            <div class="sideMenu1 sideMenu2">
+                <h2><a target="_blank" href="{info_category name="url" cat_id="56"/}">成功案例</a></h2>
+                <div class="side_t">
+                    {list_article  row="5" infolen="150" cat_id="56"}
+                        <h5 class="on"><em>1</em><a title="[value:title/]" href="[value:url/]">[value:title/]</a></h5>
+                        <dl style="display: block;">
+                            <a title="[value:title/]" href="[value:url/]" target="_blank"><img src="[value:logo/]" title="[value:title/]" alt="[value:title/]"></a>
+                        </dl>
+                    {/list_article}
+                </div>
+
+            </div>
+            <script type="text/javascript">
+                jQuery(".sideMenu1").slide({
+                    titCell: "h5", //鼠标触发对象
+                    targetCell: "dl", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+                    effect: "slideDown", //targetCell下拉效果
+                    delayTime: 300, //效果时间
+                    triggerTime: 150, //鼠标延迟触发时间（默认150）
+                    defaultPlay: true, //默认是否执行效果（默认true）
+                    returnDefault: true //鼠标从.sideMen移走后返回默认状态（默认false）
+                });
+            </script>
+
+            <div class="ny_contact2"><img src="{var name="tplurl"/}images/cl_lianxi2.jpg" alt=""/></div>
+        </div>
+
+        <div class="ny1_r fr">
+            <div class="ny_r_title1">
+                <div class="xnav_m2">
+                    <h2>推荐产品<em>/ Popular Products</em></h2>
+                    <span></span>
+                </div>
+            </div>
+            <div class="picFocus">
+                <div class="bd">
+                    <ul>
+                        {list_product  row="4" logo="1"}
+                        <li>
+                            <div class="pic"><a href="[value:url/]" title="[value:title/]"><img src="[value:logo/]"  alt="[value:title/]"/></a></div>
+                            <div class="title">
+                                <h4><a a href="[value:url/]" title="[value:title/]">[value:title/]</a></h4>
+                                <h5>[value:remark/]</h5>
+                                <h6>产品特点：
+                                    <p>[value:description/]</p>
+                                </h6>
+                                <span>
+                                    <a href="http://p.qiao.baidu.com//im/index?siteid=9731037&ucid=6933895" target="_blank" onclick="doyoo.util.openChat('g=');return false;">+ 查询更多型号报价</a>
+                                    <a class="te" href="[value:url/]l"  title="[value:title/]">点击详情 </a>
+                                </span>
+                            </div>
+                        </li>
+                        {/list_product}
+                    </ul>
+                </div>
+                <div class="hd">
+                    <ul>
+                        {list_product  row="4" logo="1"}
+                        <li></li>
+                        {/list_product}
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">                      jQuery(".picFocus").slide({ mainCell: ".bd ul", effect: "left", autoPlay: true });</script>
+
+            <div class="jia_cp1 clearfix">
+                <div class="zi fl">
+                    <h6>选购卷闸门前必看！！！</h6>
+                    <p><b>A</b>切割片种类太多，挑选浪费时间？可把需求告诉客服，为您推荐性价比高的卷闸门，不需翻页查找；</p>
+                    <p><b>B</b>明确自己所需型号，可直接把型号告知客服，马上获取产品资料和报价；</p>
+                    <p><b>C</b>做代理或采购量大，可通过下方渠道客服了解市场销量好的产品，同时获取产品出厂报价！</p>
+                </div>
+                <div class="tu fr">
+                    <ul>
+                        <li><p>干切王锯片</p></li><li class="ys1"><p>陶瓷切割片</p></li><li class="ys2"><p>墙槽切割片</p></li>
+                        <li class="ys1"><p>花岗岩锯片</p></li><li><p>大理石锯片</p></li><li class="ys2"><p>电镀切割片</p></li>
+                        <li class="ys2"><p>马路切割片</p></li><li class="ys1"><p>微晶石锯片</p></li><li><p>钎焊切割片</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cp_mm cp_mm1"> <div class="tatou"><a href="http://p.qiao.baidu.com//im/index?siteid=9731037&ucid=6933895" target="_blank">点我即刻快速咨询</a></div></div>
+            <div class="ny_r_title1">
+                <div class="xnav_m2">
+                    <h2>所有类别<em>/ Products</em></h2>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="m2_mr">
+                <div class="zhanshi">
+                    {list_product  row="9" logo="1" type="page"}
+                    <dl>
+                        <a href="[value:url/]" title="[value:title/]">
+                            <dt><img src="[value:logo/]" width="244" height="209" alt="[value:title/]" title=""/></dt>
+                            <dd>
+                                <h2> [value:title/]</h2>
+                                <span>产品详情</span>
+                            </dd>
+                        </a>
+                    </dl>
+                    {/list_product}
+                </div>
+            </div>
+
+            <div class="page-box">
+                <div class="digg">
+                    {page}
+                        <a href="[value:first_url/]">首页</a>
+                        <a href="[value:shang_url/]">上一页</a>
+                        {pageno}
+                        <a href="[value:url/]">[value:label/]</a>
+                        {/pageno}
+                        <a href="[value:xia_url/]">下一页</a>
+                        <a href="[value:last_url/]">尾页</a>
+                        {/page}
+                </div>
+            </div>
+
+            <div class="cp_main1">
+                <div class="cp_mm" style="margin: 0px auto 0;">
+                    <div class="xnav1"><p>卷闸门种类较多，更多型号请咨询客服快速获取！</p></div>
+                    <div class="tatou"><a href="http://p.qiao.baidu.com//im/index?siteid=9731037&ucid=6933895" target="_blank">点我咨询更多系列型号</a></div>
+                    <div class="cp1">
+                        <ul>
+                            <li class="tu1"><img src="{var name="tplurl"/}images/cp_nytu1.jpg"/><p>生产车间</p></li>
+                            <li class="tu1"><img src="{var name="tplurl"/}images/cp_nytu2.jpg"/><p>刀头焊接</p></li>
+                            <li class="tu1"><img src="{var name="tplurl"/}images/cp_nytu3.jpg"/><p>锯片半成品</p></li>
+                            <li class="tu1"><img src="{var name="tplurl"/}images/cp_nytu4.jpg"/><p>锯片烧结</p></li>
+                            <li class="tu2"><img src="{var name="tplurl"/}images/cp_nytu5.jpg"/><p>昌利工业园</p></li>
+                            <li class="tu2"><img src="{var name="tplurl"/}images/cp_nytu6.jpg"/><p>公司产品</p></li>
+                            <li class="tu2"><img src="{var name="tplurl"/}images/cp_nytu7.jpg"/><p>生产厂房</p></li>
+                            <li class="tu2"><img src="{var name="tplurl"/}images/cp_nytu8.jpg"/><p>销售管理团队</p></li>
+                        </ul>
+                    </div>
+                    <div class="xnav1"><p>卷闸门种类太多怎么选？商通惠工资深业务经理在线为您选择性价比高的卷闸门！</p></div>
+                    <div class="tatou"><a href="http://p.qiao.baidu.com//im/index?siteid=9731037&ucid=6933895" target="_blank">您的1对1专属VIP客服</a></div>
+                    <div class="cp2"><img src="{var name="tplurl"/}images/cp_nydtu1.jpg"/></div>
+                    <div class="xnav1"><p>26年资深研发制造企业，厂家直销高性价比，点击获取产品报价！</p></div>
+                    <div class="tatou"><a href="http://p.qiao.baidu.com//im/index?siteid=9731037&ucid=6933895" target="_blank">点我获取卷闸门优惠报价</a></div>
+                </div>
+            </div>
+            <div class="ny_r_title1">
+                <div class="xnav_m2">
+                    <h2>推荐阅读<em>/ Recommended reading</em></h2>
+                    <span></span>
+                </div>
+            </div>
+            <div class="nycp_news clearfix">
+                <ul class="news_ms">
+                    {list_article cat_id="59"  titlelen="39" row="6"}
+                    <li>
+                        <a title=“[value:stitle/]" href="[value:url/]">
+                            <span>“[value:stitle/]</span>[value:addtime/]
+                        </a>
+                    </li>
+                    {/list_article}
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+</div>
+
+<!--引入footer.html-->
+{include file="footer.html"/}

@@ -1,0 +1,266 @@
+<!--引入heeader.html-->
+{include file="header.html"/}
+
+<div class="fullSlide">
+    <div class="bd">
+        <ul>
+            {list_ad}
+            <li style="background:url([value:image/]) center no-repeat;"><a
+                    target="_blank" href="[value:url/]"></a></li>
+            {/list_ad}
+        </ul>
+    </div>
+    <div class="hd">
+        <ul></ul>
+    </div>
+    <span class="prev"></span>
+    <span class="next"></span>
+</div>
+<script type="text/javascript">
+    /* 控制左右按钮显示 */
+    jQuery(".fullSlide").hover(function () {
+        jQuery(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+    }, function () {
+        jQuery(this).find(".prev,.next").fadeOut()
+    });
+    /* 调用SuperSlide */
+    jQuery(".fullSlide").slide({
+        titCell: ".hd ul", mainCell: ".bd ul", effect: "fold", autoPlay: true, autoPage: true, trigger: "click",
+        startFun: function (i) {
+            var curLi = jQuery(".fullSlide .bd li").eq(i);
+            /* 当前大图的li */
+            if (!!curLi.attr("_src")) {
+                curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+                /* 将_src地址赋予li背景，然后删除_src */
+            }
+        }
+    });
+</script>
+
+<div class="search clearfix">
+    <p class="fl">热门关键词：
+        {list_category type="2" row="3"}
+        <a href="[value:url/]">[value:name/]</a>
+        {/list_category}
+    </p>
+    <div class="sousuo fr">
+        <div class="search1">
+            <form method="post" action="/so_product" id="search-form">
+            <input type="text" class="inp01" id="keywords" name="keyword" onkeydown="if(event.keyCode==13){$('#search-form').submit();return false};"  placeholder="输入关键字搜索" x-webkit-speech=""/>
+            <input type="submit" class="inpso"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="content clearfix">
+    <div class="fl m2_ml">
+        <h2>惠工产品中心</h2>
+        <div class="fenlei">
+            {list_category type="2"}
+            <ul>
+                <h3><a href="[value:url/]">[value:name/]</a></h3>
+                {list_category_2 fid="[value:id/]" type="2"}
+                <li><a href="[value:url_2/]">[value:name_2/]</a></li>
+                {/list_category_2}
+            </ul>
+            {/list_category}
+        </div>
+        <div class="xbanner"><img src="{var name="tplurl"/}images/xbanner1.jpg" alt="许昌通商惠工科技有限公司卷闸门" width="240"
+            height="103"/></div>
+    </div>
+
+    <div class="fr m2_mr">
+        <div class="xnav">
+            <h2>热销<b>产品</b><span> / products</span></h2>
+            <h3><a href="product.html">点击查看更多</a></h3>
+            <em></em>
+        </div>
+        <div class="zhanshi">
+            {list_product  row="9" logo="1"}
+            <dl>
+                <a href="[value:url/]" title="[value:title/]">
+                    <dt><img src="[value:logo/]" width="244" height="209" alt="[value:title/]" title=""/></dt>
+                    <dd>
+                        <h2> [value:title/]</h2>
+                        <span>产品详情</span>
+                    </dd>
+                </a>
+            </dl>
+            {/list_product}
+        </div>
+    </div>
+</div>
+
+<div class="ys_xnav"><h2>{text id="4" strip_tags="true"/}</h2></div>
+<div class="youshi1 youshi">
+    <dl class="fl">
+        <dt><img src="{var name="tplurl"/}images/youshi_xb1.png"/></dt>
+        <dd>
+            <h2><a target="_blank" href="/youshi.html">{text id="5" strip_tags="true"/}：</a></h2>
+            <p>{text id="14"/}</p>
+        </dd>
+    </dl>
+    <img class="fr" src="{var name="tplurl"/}images/youshi_bj1.jpg" alt="许昌通商惠工卷闸门优势" width="635" height="290"/>
+</div>
+<div class="youshi2 youshi">
+    <img class="fl" src="{var name="tplurl"/}images/youshi_bj2.jpg" alt="许昌通商惠工卷闸门优势" width="550" height="310"/>
+    <dl class="fr">
+        <dt>
+        <h2><a target="_blank" href="/youshi.html">{text id="7" strip_tags="true"/}：</a></h2></dt>
+        <dd>
+            <div>{text id="15"/}</div>
+        </dd>
+    </dl>
+</div>
+
+
+<!-- 优势 结束 ------------------------------------------->
+
+<div class="ybanner1">
+    <div class="main"></div>
+</div>
+<div class="content">
+    <div class="sy_xnav sy_xnav3">
+        <div class="xnav"><h3>{config name="cfg_webname"/}<span>{text id="8" strip_tags="true"/}</span></h3></div>
+    </div>
+    <div class="jianjie">
+        <dl>
+            <dt>
+                <embed src='http://cloud.video.taobao.com//play/u/2763840619/p/2/e/1/t/1/58307945.swf'
+                       allowFullScreen='true' quality='high' width='465' height='294' align='middle'
+                       allowScriptAccess='always' type='application/x-shockwave-flash'>
+                </embed>
+            </dt>
+            <dd>
+              <div style="max-height:210px;overflow:hidden;">{text id="9"/}</div>
+                <span><a href="/about.html">查看详情</a></span>
+            </dd>
+        </dl>
+
+    </div>
+</div>
+<!-- 简介 结束 ------------------------------------------->
+
+<div class="content">
+    <div class="sy_xnav sy_xnav4">
+        <h2><span>惠工</span>相册</h2>
+    </div>
+    <div class="slideGroup">
+        <div class="parHd">
+            <ul>
+                {list_category type="1" fid="61"}
+                <li>[value:name/]</li>
+                {/list_category}
+            </ul>
+        </div>
+        <div class="parBd">
+
+            {list_category type="1" fid="61"}
+            <div class="slideBox">
+                <a class="sPrev" href="javascript:void(0)"> > </a>
+                <ul>
+
+                    {list_article  row="10" logo="1" cat_id="[value:id/]"}
+                    <li>
+                        <a href="[value:url/]" target="_blank"  title="[value:title/]">
+                            <div class="pic"><img src="[value:logo/]" width="245" height="164"/></div>
+                            <div class="title">[value:stitle/]</div>
+                        </a>
+                    </li>
+                    {/list_article  }
+                </ul>
+                <a class="sNext" href="javascript:void(0)"> < </a>
+            </div><!-- slideBox End -->
+            {/list_category}
+        </div><!-- parBd End -->
+    </div>
+    <script type="text/javascript">
+        /* 内层图片滚动切换 */
+        jQuery(".slideGroup .slideBox").slide({
+            mainCell: "ul",
+            vis: 4,
+            prevCell: ".sPrev",
+            nextCell: ".sNext",
+            effect: "leftLoop"
+        });
+        /* 外层tab切换 */
+        jQuery(".slideGroup").slide({titCell: ".parHd li", mainCell: ".parBd"});
+    </script>
+</div>
+<!-- 公司相册 结束 ------------------------------------------->
+
+<div class="content" style="padding:10px 0 0;">
+    <div class="news clearfix">
+        <div class="ml fl">
+            <div class="xnav"><h2>最新<span>合作动态</span></h2>
+                <h3><a href="{info_category cat_id="65" name="url"/}">更多</a></h3><em></em></div>
+            {list_article  row="1" cat_id="65"}
+            <div class="news1"><img src="[value:logo/]" width="375" height="221"/></div>
+            {/list_article  }
+            <ul>
+                {list_article  row="1" cat_id="65" titlelen="36"}
+                <li><a href="[value:url/]" title="[value:title/]">
+                    [value:stitle/]<span>[value:addtime/] </span>
+                </a></li>
+                {/list_article  }
+            </ul>
+        </div>
+        <!-- 最新合作动态 结束 ----->
+        <div class="slideTxtBox fr">
+            <div class="hd">
+                <ul>
+                    <li><span>企业</span>新闻</li>
+                    <li><span>行业</span>资讯</li>
+                </ul>
+            </div>
+
+            <div class="bd">
+                <ul>
+                    {list_article  row="1" cat_id="59" titlelen="50" infolen="102"}
+                    <dl>
+                        <dt><a href="[value:url/]" target="_blank">
+                            <img src="[value:logo/]""/></a>
+                        </dt>
+                        <dd>
+                            <h4><a href="[value:url/]}">[value:stitle/]</a></h4>
+                            <p>
+                                [value:remark/]
+                                <a target="_blank" href="[value:url/]">[查看详情]</a>
+                            </p>
+                        </dd>
+                    </dl>
+                    {/list_article}
+                    {list_article cat_id="59"  titlelen="21" row="6"}
+                    <li><a href="[value:url/]" target="_blank">[value:stitle/]<span>[value:addtime/] </span></a></li>
+                    {/list_article}
+                </ul>
+                <ul>
+                    {list_article  row="1" cat_id="60" titlelen="50" infolen="102"}
+                    <dl>
+                        <dt><a href="[value:url/]" target="_blank">
+                            <img src="[value:logo/]""/></a>
+                        </dt>
+                        <dd>
+                            <h4><a href="[value:url/]}">[value:stitle/]</a></h4>
+                            <p>
+                                [value:remark/]
+                                <a target="_blank" href="[value:url/]">[查看详情]</a>
+                            </p>
+                        </dd>
+                    </dl>
+                    {/list_article}
+                    {list_article  cat_id="60"  titlelen="21" row="6"}
+                    <li><a href="[value:url/]" target="_blank">[value:stitle/]<span>[value:addtime/] </span></a></li>
+                    {/list_article}
+                </ul>
+            </div>
+            <!-- bd 结束 ----->
+        </div>
+        <script type="text/javascript">              jQuery(".slideTxtBox").slide();</script>
+        <!-- 企业新闻 结束 ----->
+    </div>
+</div>
+
+<!--引入footer.html-->
+{include file="footer.html"/}

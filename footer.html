@@ -1,0 +1,65 @@
+<div class="content">
+    <div class="sy_xnav sy_xnav4">
+        <h2><span>快速</span>通道</h2>
+    </div>
+    <div class="tongdao">
+        <h2>产品专题：</h2>
+        {list_category type="2" row="7"}
+        <p><a href="[value:url/]">[value:name/]</a></p>
+        {/list_category}
+        <span><a href="/product.html">[查看更多+]</a></span>
+    </div>
+    <div class="tongdao" style="margin:0px auto 15px;">
+        <h2>案例专题：</h2>
+        {list_article  row="5" cat_id="56" titlelen="10"}
+        <p><a href="[value:url/]" title="[value:title/]">[value:seo_title/]</a></p>
+        {/list_article}
+        <span><a href="{info_category name="url" cat_id="56"/}">[查看更多+]</a></span>
+    </div>
+</div>
+<!-- 快速通道 结束 ------------------------------------------->
+<div class="jz_nav">
+    <ul>
+        {list_nav nav_type="3" row="9"}
+        <li><a href="[value:url/]"  [value:nofollow/]>[value:name/]</a></li>
+        {/list_nav}
+    </ul>
+</div>
+<!-- 脚注导航 结束 ------------------------------------------->
+<div class="footer">
+    <div>
+        {text id="10"/}
+    </div>
+
+    <div class="main">
+
+        <div class="jz1">
+            <img src="{config name="cfg_logo"/}" alt="许昌通商惠工科技有限公司" width="72" height="72"/>
+            <p><a href="{var name="host"/}" title="许昌通商惠工科技有限公司">{config name="cfg_webname"/}</a><span>版权所有</span><br/>{config name="cfg_icp"/}
+            </p>
+        </div>
+
+        <div class="jz2">
+            <img src="{var name="tplurl"/}images/jz_xb1.png" alt="许昌通商惠工科技有限公司卷闸门"/>
+            <p>联系电话：<br/>{config name="cfg_kefu_tel"/}<span>{config name="cfg_kefu_tel_2"/}<span></p>
+            <img src="{var name="tplurl"/}images/jz_xb2.png"/>
+            <p>邮箱：<br/><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="e9d8dcd9dadededfdda99898c78a8684">{config name="cfg_kefu_email"/}</a>
+            </p>
+            <img src="{var name="tplurl"/}images/jz_xb3.png"/>
+            <p>公司地址：<br/>{config name="cfg_kefu_address"/}</p>
+        </div>
+        <div class="jz3"><img src="{config name="cfg_kefu_erweima_1"/}" alt="许昌惠工有限责任公司二维码" width="109" height="109"/></div>
+    </div>
+    <!-- main 结束 -->
+    <div class="lianjie">
+        <p>友情链接：</p>
+        {list_link}
+        <p><a href="[value:url/]">[value:name/]</a></p>
+        {/list_link}
+    </div>
+</div>
+<!-- 脚注 结束 ------------------------------------------->
+<div id="#izl_rmenu"><a id="scrollUp" style="position: fixed; "></a></div>
+
+</body>
+</html>

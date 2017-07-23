@@ -1,0 +1,173 @@
+{include file="header.html"/}
+<div class="allpage">
+    <div class="black-fixed iconfont"></div>
+    <div class="header">
+        <div class="head">
+            <a href="{var name="host"/}" title="首页" class="home-btn commonfont"></a>
+            <p class="top-title">{info_product name="title"/}</p>
+
+            <div class="nav-btn commonfont"></div>
+        </div>
+        <div class="type">
+
+            <div class="search_hl iconfont"></div>
+            <div class="search" style="display: block;">
+                <form action="/so_product" method="get">
+                <a class="xbtn iconfont" href="javascript:;"></a>
+                <input type="text" name="keyword" class="search-lh-input" placeholder="请输入搜索关键词">
+                <input type="submit" class="search-lh-btn iconfont" value="">
+                </form>
+            </div>
+
+            <div class="banner3">
+                <div class="swiper-slide"><img src="{var name="tplurl"/}images/C4BDF6A267CECFF1D1470400134C4C93.jpg">
+                </div>
+            </div>
+            <h1>产品分类：</h1>
+            <ul>
+                {list_category type="2" row="3"}
+                <li>
+                    <a href="[value:url/]" title="[value:name/]">[value:name/]</a>
+                    <span class="commonfont class-down"></span>
+                    <dl>
+                    </dl>
+                </li>
+                {/list_category}
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        {pos/}
+        <div class="about">
+            <h1>{info_product name="title"/}</h1>
+            <div class="picContent">{info_product name="content"/}</div>
+            上一篇：
+            {pre_product}
+            <a href="[value:url/]">[value:title/]</a>
+            {/pre_product}
+            下一篇：
+            {next_product}
+            <a href="[value:url/]">[value:title/]</a>
+            {/next_product}
+
+            <a href="{info_product name="cat_url"/}" title="返回列表" class="back">返回列表</a>
+        </div>
+
+        <div class="cj_zs">
+            <div class="mt20 sharetxt">
+                卷闸门种类较多，更多直接在线快速获取
+            </div>
+            <div class="mt15 tc"><a class=" linkmore"
+                                    href="http://p.qiao.baidu.com/cps/chat?siteId=10966272&userId=10274876">点我获取更多系列型号</a>
+            </div>
+            <img src="{var name="tplurl"/}images/img1.jpg" alt="" class="mt15 db">
+            <img src="{var name="tplurl"/}images/img2.jpg" alt="" class="db">
+            <div class="mt20 sharetxt">
+                卷闸门种类太多怎么选？商通惠工资深业务经理在线帮您选择性价比高的卷闸门！
+            </div>
+            <div class="mt15 tc"><a class=" linkmore"
+                                    href="http://p.qiao.baidu.com/cps/chat?siteId=10966272&userId=10274876">点我获取更多系列型号</a>
+            </div>
+            <img src="{var name="tplurl"/}images/img3.jpg" alt="" class="db mt15">
+            <div class="mt20 sharetxt">
+                26年研发制造企业，厂家直销性价比高，一片也是批发价！
+            </div>
+            <div class="mt15 tc"><a class=" linkmore"
+                                    href="http://p.qiao.baidu.com/cps/chat?siteId=10966272&userId=10274876">点我获取更多系列型号</a>
+            </div>
+            <div class="calcase">
+               商通惠工客户案例
+            </div>
+            {list_article  row="4" cat_id="56" infolen="300"}
+            <div class="mt15 ac-caselist">
+                <img src="[value:logo/]" alt="[value:title/]" class="fl" width="100%">
+                <div class="mt10 ri-info">
+                    <h3>[value:title/]</h3>
+                    <p>
+                        [value:remark/]</p>
+                    <div class="mt10 tc"><a href="http://p.qiao.baidu.com/cps/chat?siteId=10966272&userId=10274876"
+                                            class="ino-more">点我获取报价</a></div>
+                </div>
+            </div>
+            {/list_article  }
+            <style>.mt20 {
+                margin-top: 20px;
+            }
+
+            .mt10 {
+                margin-top: 10px;
+            }
+
+            .mt15 {
+                margin-top: 15px;
+            }
+
+            .linkmore {
+                display: inline-block;
+                text-align: center;
+                color: #fff;
+                font-size: 1.3em;
+                padding: 10px 10px 10px 60px;
+                background: url(/App/Cnm/Public/images/icobg.jpg) no-repeat 10px bottom #d01111;
+                border-radius: 5px
+            }
+
+            .sharetxt {
+                padding: 10px 15px;
+                color: #fff;
+                font-size: 1.5em;
+                line-height: 120%;
+                text-align: center;
+                background: #196bb3
+            }
+
+            .db {
+                display: block;
+            }
+
+            .tc {
+                text-align: center;
+            }
+
+            .ac-caselist {
+                padding: 3px;
+                border: 1px solid #aaa;
+                background: #f7f7f7;
+                overflow: hidden;
+                border-radius: 5px
+            }
+
+            .ri-info h3 {
+                font-size: 14px;
+                color: #d01111;
+                text-align: center;
+            }
+
+            .ri-info p {
+                overflow: hidden;
+                line-height: 130%;
+                margin-top: 10px;
+                font-size: 14px
+            }
+
+            .ri-info a {
+                padding: 2px 3px;
+                border-radius: 5px;
+                color: #fff;
+                background: #d01111;
+                font-size: 1.2em;
+                margin-left: 10px;
+            }
+
+            .calcase {
+                background: #d01111;
+                color: #fff;
+                margin-top: 20px;
+                text-align: center;
+                font-size: 1.1em;
+                padding: 10px 0
+            }</style>
+        </div>
+    </div>
+    <!--footer-->
+    {include file="footer.html"/}

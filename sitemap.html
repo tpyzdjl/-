@@ -1,0 +1,141 @@
+<!--引入heeader.html-->
+{include file="header.html"/}
+
+<div class="ny_ban1" style="background:url({var name="tplurl"/}/images/banner22.jpg) center no-repeat;"></div>
+<div class="search clearfix">
+    <div class="fl xdaoh"><p>{pos/}</p></div>
+        <div class="sousuo fr">
+            <div class="search1">
+                <form method="post" action="/so_product" id="search-form">
+                    <input type="text" class="inp01" id="keywords" name="keyword"
+                           onkeydown="if(event.keyCode==13){$('#search-form').submit();return false};"
+                           placeholder="输入关键字搜索" x-webkit-speech=""/>
+                    <input type="submit" class="inpso"/>
+                </form>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="ny clearfix">
+        <div class="ny_l fl">
+            <div class="sideMenu">
+                <h2>新闻资讯</a></h2>
+                <h4><a href="news.html">新闻中心</a></h4>
+            </div>
+
+<!--
+            {list_product  row="10" logo="1"}
+            <a href="[value:url/]" title="[value:title/]">[value:stitle/]</a>
+            <img src="[value:logo/]">
+            发布时间：[value:addtime/]
+            流量次数:[value:view/]
+            {/list_product}
+
+            {list_product  row="9" logo="1"}
+            <dl>
+                <a href="[value:url/]" title="[value:title/]">
+                    <dt><img src="[value:logo/]" width="244" height="209" alt="[value:title/]" title=""/></dt>
+                    <dd>
+                        <h2> [value:title/]</h2>
+                        <span>产品详情</span>
+                    </dd>
+                </a>
+            </dl>
+            {/list_product}-->
+
+
+            <div class="sideMenu1">
+                <h2>推荐产品</a></h2>
+                <div class="side_t">
+                    {list_product  row="6" logo="1"}
+                    <h5 class="on"><em>1</em><a title="[value:title/]" href="[value:url/]">[value:title/]</a></h5>
+                    <dl style="display: block;">
+                        <a title="[value:title/]" href="[value:url/]" target="_blank"><img src="[value:logo/]" title="[value:title/]" alt="[value:title/]"></a>
+                    </dl>
+                    {/list_product}
+                </div>
+
+            </div>
+            <script type="text/javascript">
+                jQuery(".sideMenu1").slide({
+                    titCell: "h5", //鼠标触发对象
+                    targetCell: "dl", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+                    effect: "slideDown", //targetCell下拉效果
+                    delayTime: 300, //效果时间
+                    triggerTime: 150, //鼠标延迟触发时间（默认150）
+                    defaultPlay: true, //默认是否执行效果（默认true）
+                    returnDefault: true //鼠标从.sideMen移走后返回默认状态（默认false）
+                });
+            </script>
+
+            <div class="ny_contact"><img src="{var name="tplurl"/}images/cl_lianxi1.jpg" alt="卷闸门价格"/></div>
+        </div>
+<!--
+        {list_article  row="4" infolen="150" cat_id="56"}
+        <li>
+            <a href="[value:url/]" target="_blank"  title="[value:title/]">
+                <div class="pic"><img src="[value:logo/]" width="230"
+                                      height="167"/></div>
+                <div class="title">
+                    <h2>[value:stitle/]</h2>
+                    <p>[value:remark/]</p>
+                    <div id="more1">查看详情</div>
+                </div>
+            </a>
+        </li>
+        {/list_article}-->
+
+
+        <div class="ny_r fr">
+            <div class="xnav_m3">
+                <h2>网站地图<em>/ SITEMAP</em></h2>
+                <span></span>
+            </div>
+           <div class="fuwu_wenz">
+          	<div class="map_main">
+          	<div class="sitemap_con">
+                  <div class="map_top">
+                  <div class="clear">
+                  </div>
+                  </div>
+              {list_category type="2"}
+              <h4 style="text-align:left;padding-left:5px;">
+          <a href="[value:url/]" title="[value:name/]" target="_blank">[value:name/]</a>
+          </h4>
+              <div class="b4">
+          <ul>
+           {list_category_2 fid="[value:id/]" type="2"}
+            <li><a title="[value:name_2/]" href="[value:url_2/]">[value:name_2/]</a>
+          </li>
+          {/list_category_2}
+            </ul>
+          <div class="clear"> </div>
+          </div>
+		{/list_category}
+              {list_category type="1"}
+              <h4 style="text-align:left;padding-left:5px;">
+          <a href="[value:url/]" title="[value:name/]" target="_blank">[value:name/]</a>
+          </h4>
+              <div class="b4">
+          <ul>
+           {list_category_2 fid="[value:id/]" type="2"}
+            <li><a title="[value:name_2/]" href="[value:url_2/]">惠工优势</a>
+          </li>
+          {/list_category_2}
+            </ul>
+          <div class="clear"> </div>
+          </div>
+		{/list_category}
+          
+          </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+</div>
+
+
+<!--引入footer.html-->
+{include file="footer.html"/}

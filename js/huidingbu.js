@@ -1,0 +1,3 @@
+function b(){h=$(window).height();t=$(document).scrollTop();if(t>h){$('#scrollUp').show();}else{$('#scrollUp').hide();}}
+$(document).ready(function(e){b();$('#scrollUp').click(function(){$(document).scrollTop(0);})});$(window).scroll(function(e){b();})
+function AddFavorite(sURL,sTitle){sURL=encodeURI(sURL);try{window.external.addFavorite(sURL,sTitle);}catch(e){try{window.sidebar.addPanel(sTitle,sURL,"");}catch(e){alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");}}}

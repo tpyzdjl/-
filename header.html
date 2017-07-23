@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>{tdk name="title"/}</title>
+    <meta name="keywords" content="{tdk name="keywords"/}"/>
+    <meta name="description" content="{tdk name="description"/}"/>
+    <meta name="baidu-site-verification" content="RCJVwufm6N"/>
+    <link href="{var name="tplurl"/}css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="{var name="tplurl"/}css/common.css" rel="stylesheet" type="text/css" />
+    <link href="{var name="tplurl"/}css/reset.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="{var name="tplurl"/}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{var name="tplurl"/}js/jquery.superslide.2.1.1.js"></script>
+    <script type="text/javascript" src="{var name="tplurl"/}js/huidingbu.js"></script>
+    <script type="text/javascript" charset="utf-8" src="{var name="tplurl"/}js/common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="{var name="tplurl"/}js/picture.js"></script>
+    <link href="{config name="cfg_ico"/}" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+<div class="top">
+    <div class="top_m">
+        <ul>
+            <li>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+
+                        $("a.moquu_wmaps").on('click', function () {
+                            popWin.showWin("800", "475", "惠工卷闸门", "");
+                        });
+                    });
+                </script>
+            </li>
+            <li>{text id="1" strip_tags="true"/}</li>
+            <div class="top_right" style=" float: right;">
+                {list_nav nav_type="2"}
+                <li style="background:#fff; border-left:1px solid #f1f1f1;border-right:1px solid #f1f1f1;padding:0 15px;"><a style="color:#e21001; font-weight:bold;" href="[value:url/]"  [value:nofollow/]>[value:name/]</a></li>
+                {/list_nav}
+        </ul>
+    </div>
+</div>
+</div>
+<div class="header">
+    <div class="header_m">
+        <div class="logo" style="background-image: url({config name="cfg_logo"/})"><a href="#" alt="许昌通商惠工科技有限公司卷闸门"></a></div>
+    <div class="biaoti">
+        <h2>{config name="cfg_webname"/}</h2>
+        <p>{text id="2" strip_tags="true"/}</p>
+    </div>
+    <div class="dianhua"><h2><span>咨询热线：</span> {config name="cfg_kefu_tel"/}</h2>
+        <h2><span>400 热线：</span> {config name="cfg_kefu_tel_2"/}</h2>
+    </div>
+    <div class="ggao">{text id="3" strip_tags="true"/}</div>
+</div>
+</div>
+<div class="navBar">
+    <ul class="nav clearfix">
+        {list_nav nav_type="1"}
+        <li id="m3" class="m">
+            <h3><a href="[value:url/]"  [value:nofollow/]>[value:name/]<i></i></a></h3>
+            <ul class="sub">
+                {list_nav_2 fid="[value:id/]" nav_type="1"}
+                <li><a href="[value:url_2/]"  [value:nofollow_2/]>[value:name_2/]</a></li>
+                {/list_nav_2}
+            </ul>
+        </li>
+        {/list_nav}
+    </ul>
+</div>
+<script type="text/javascript">
+    jQuery(".nav").slide({
+        type: "menu", //效果类型
+        titCell: ".m", // 鼠标触发对象
+        targetCell: ".sub", // 效果对象，必须被titCell包含
+        effect: "slideDown", //下拉效果
+        delayTime: 150, // 效果时间
+        triggerTime: 0, //鼠标延迟触发时间
+        returnDefault: true  //返回默认状态
+    });
+</script>
